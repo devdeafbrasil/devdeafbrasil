@@ -1,20 +1,88 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 
-nav.header {
-    background-color: #00447c;
-    width: 100%;
-    padding: 1%;
-    height: 15%;
+/* MENU  corrige: remover o "linha pulo movimenta "*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #00447c;
+  width: 100%;
+  height: 11vh;
 }
 
-a.title {
-    color: #ffffff;
-    font-size: 20px;
-    font-family: 'Arial';
-    padding-left: 80px;
+nav .menu {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 1s;
+}
+nav .logo-tipo {
+  width: 25%;
+  font-size: 40px;
+  text-align: center;
+  color: #ffffff;
+  padding-left: 3%;
+}
+
+nav .menu a {
+  display: flex;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 0 1% 0 1%;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.menu a:hover {
+  color: #ff9e00;
+  border-bottom: 1px solid #ff9e00;
+}
+nav .menu .menucolor::first-line {
+  color: #ff9e00;
+}
+
+/* HEADER*/
+header {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  overflow: hidden;
+}
+
+.slide,
+.slide img {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #00447c;
+  width: 100%;
+  height: 8%;
+  clear: both;
+}
+
+.rodape {
+  color: #ffffff;
+  font-size: 15px;
+  text-align: center;
+  padding: 1%;
 }
