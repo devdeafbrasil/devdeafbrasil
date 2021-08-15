@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+nav.header {
+    background-color: #00447c;
+    width: 100%;
+    padding: 1%;
+    height: 15%;
+}
+
+a.title {
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Arial';
+    padding-left: 80px;
+}
