@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #00447c;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.logo {
+  color: #ffffffc2;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+
+.nav-links a {
+  color: #ffffffc2;
+  letter-spacing: 3px;
+  font-weight: 800;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  padding: 0 0 5px 0;
+}
+
+.nav-links a:after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+.nav-links a:hover:after {
+  border-bottom: 3px solid #ffffff;
+  width: 100%;
+}
+.nav-links a:hover {
+  transition: 0.5s;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-links .menufixa:first-child {
+  color: #fdfdfd;
+  font-weight: bold;
+  clear: both;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div:hover {
+  color: #c07d00;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: rgba(245, 245, 245, 0.849);
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #00447c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links a {
+    color: white;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+footer {
+  width: 100%;
+  height: 8vh;
+  position: absolute;
+  padding: 18px;
+  bottom: 0;
+  background-color: #00447c;
+}
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+}
